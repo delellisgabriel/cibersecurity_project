@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saborly | Comparte tus recetas favoritas! 🍕🥗🍣</title>
   <link rel="icon" href="./favicon.ico">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.saborly.com/">
+  <meta property="og:title" content="Saborly | Comparte tus recetas favoritas! 🍕🥗🍣">
+  <meta property="og:description" content="Descubre y comparte tus recetas favoritas con Saborly. ¡Únete a nuestra comunidad de amantes de la cocina!">
+  <meta property="og:image" content="https://www.saborly.com/images/og-image.jpg">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.saborly.com/">
+  <meta property="twitter:title" content="Saborly | Comparte tus recetas favoritas! 🍕🥗🍣">
+  <meta property="twitter:description" content="Descubre y comparte tus recetas favoritas con Saborly. ¡Únete a nuestra comunidad de amantes de la cocina!">
+  <meta property="twitter:image" content="https://www.saborly.com/images/twitter-image.jpg">
   <style>
     * {
       margin: 0;
@@ -263,7 +275,7 @@
     .recipe-item {
       display: flex;
       flex-direction: column;
-      gap: .25rem;
+      gap: .5rem;
       max-width: 100%;
       border-radius: 4px;
       border: 1px solid rgba(0, 0, 0, .1);
@@ -310,25 +322,23 @@
   </style>
 </head>
 <body>
-  <nav class="navbar card">
-    <a class="logo" href="index.html">
-      <img src="./logo.png" alt="Saborly">
-      <span>Saborly</div>
+  <nav class="navbar card" role="navigation" aria-label="Main Navigation">
+    <a class="logo" href="index.html" aria-label="Página principal">
+      <img src="./logo.png" alt="Saborly Logo">
+      <span>Saborly</span>
     </a>
     <ul>
       <li>
-        <a href="index.html">Inicio</a>
+        <a href="index.html" aria-label="Inicio">Inicio</a>
       </li>
       <li>
-        <a href="#registro">Registro</a>
+        <a href="#registro" aria-label="Registro">Registro</a>
       </li>
       <li>
-        <a href="#recetas-destacadas">Recetas destacadas</a>
+        <a href="#recetas-destacadas" aria-label="Recetas destacadas">Recetas destacadas</a>
       </li>
       <li>
-        <button
-          id="toggle-css"
-        >
+        <button id="toggle-css" aria-label="Alternar estado del CSS">
             Disable CSS
         </button>
       </li>
@@ -339,7 +349,7 @@
       <img src="https://www.foodandwine.com/thmb/4qg95tjf0mgdHqez5OLLYc0PNT4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg" alt="Pizza margarita" />
       <div class="hero-description">
         <h1>¡Comparte tus recetas favoritas y descubre delicias de todo el mundo!</h1>
-        <h4>Únete a nosotros y déjate llevar por un viaje culinario lleno de sabores y creatividad. ¡La aventura gastronómica te espera!</h2>
+        <h4>Únete a nosotros y déjate llevar por un viaje culinario lleno de sabores y creatividad. ¡La aventura gastronómica te espera!</h4>
         <div class="food-box-wrapper">
           <span class="food-box">
             🥘
@@ -375,15 +385,15 @@
           </span>
         </div>
         <a class="hero-btn" href="#registro">
-          <button>
+          <button aria-label="Registrarme">
             Registrarme
           </button>
         </a>
       </div>
     </section>
     <section class="form-wrapper card">
-      <h4>Registro</h2>
-      <form class="form" id="registro">
+      <h4>Registro</h4>
+      <form class="form" id="registro" aria-labelledby="registro">
         <label for="name">
           Nombre:
           <input type="text" id="name" name="name" required>
@@ -400,19 +410,20 @@
           Contraseña:
           <input type="password" id="password" name="password" required>
         </label>
-        <button class="submit-btn" type="submit">Registrarme 🤤</button>
+        <button class="submit-btn" type="submit" aria-label="Registrarme">
+          Registrarme 🤤
+        </button>
       </form>
     </section>
     <section class="recipes card">
-      <h4 id="recetas-destacadas">Recetas destacadas</h2>
+      <h4 id="recetas-destacadas">Recetas destacadas</h4>
       <ul class="recipe-list">
         <li class="recipe-item">
           <img src="https://www.foodandwine.com/thmb/_GuYt-td3s1L_Q6JjLLyn7xC1Vc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/California-Sushi-Rolls-FT-RECIPE0123-efc7744ed3e642c7864788a7c227facb.jpg" alt="Sushi" />
-          <h5>Sushi</h3>
+          <h5>Sushi</h5>
           <p>
             El sushi es un plato de origen japonés que se prepara con arroz cocido y vinagre, combinado con otros ingredientes como pescado, mariscos, verduras, huevo o frutas.
           </p>
-          <br />
           <h6>Ingredientes</h6>
           <p>
             Arroz, alga nori, pescado, verduras, vinagre de arroz, azúcar, sal, salsa de soja, wasabi, jengibre encurtido.
@@ -420,11 +431,10 @@
         </li>
         <li class="recipe-item">
           <img src="https://www.foodandwine.com/thmb/4qg95tjf0mgdHqez5OLLYc0PNT4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg" alt="Pizza margarita" />
-          <h5>Pizza margarita</h3>
+          <h5>Pizza margarita</h5>
           <p>
             La pizza margarita es una de las recetas más populares de la cocina italiana. Se caracteriza por su sencillez y su sabor inconfundible.
           </p>
-          <br />
           <h6>Ingredientes</h6>
           <p>
             Masa de pizza, tomate, mozzarella, albahaca, aceite de oliva, sal.
@@ -432,11 +442,10 @@
         </li>
         <li class="recipe-item">
           <img src="https://www.foodandwine.com/thmb/jldKZBYIoXJWXodRE9ut87K8Mag=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg" alt="Hamburguesa" />
-          <h5>Hamburguesa</h3>
+          <h5>Hamburguesa</h5>
           <p>
             La hamburguesa es un tipo de sándwich que consiste en un filete de carne picada, generalmente de ternera, que se cocina a la parrilla o a la plancha.
           </p>
-          <br />
           <h6>Ingredientes</h6>
           <p>
             Pan de hamburguesa, carne picada, lechuga, tomate, cebolla, queso, bacon, pepinillos, ketchup, mostaza, mayonesa.
@@ -444,11 +453,10 @@
         </li>
         <li class="recipe-item">
           <img src="https://www.foodandwine.com/thmb/_GuYt-td3s1L_Q6JjLLyn7xC1Vc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/California-Sushi-Rolls-FT-RECIPE0123-efc7744ed3e642c7864788a7c227facb.jpg" alt="Sushi" />
-          <h5>Sushi</h3>
+          <h5>Sushi</h5>
           <p>
             El sushi es un plato de origen japonés que se prepara con arroz cocido y vinagre, combinado con otros ingredientes como pescado, mariscos, verduras, huevo o frutas.
           </p>
-          <br />
           <h6>Ingredientes</h6>
           <p>
             Arroz, alga nori, pescado, verduras, vinagre de arroz, azúcar, sal, salsa de soja, wasabi, jengibre encurtido.
@@ -456,11 +464,10 @@
         </li>
         <li class="recipe-item">
           <img src="https://www.foodandwine.com/thmb/4qg95tjf0mgdHqez5OLLYc0PNT4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg" alt="Pizza margarita" />
-          <h5>Pizza margarita</h3>
+          <h5>Pizza margarita</h5>
           <p>
             La pizza margarita es una de las recetas más populares de la cocina italiana. Se caracteriza por su sencillez y su sabor inconfundible.
           </p>
-          <br />
           <h6>Ingredientes</h6>
           <p>
             Masa de pizza, tomate, mozzarella, albahaca, aceite de oliva, sal.
@@ -468,11 +475,10 @@
         </li>
         <li class="recipe-item">
           <img src="https://www.foodandwine.com/thmb/jldKZBYIoXJWXodRE9ut87K8Mag=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg" alt="Hamburguesa" />
-          <h5>Hamburguesa</h3>
+          <h5>Hamburguesa</h5>
           <p>
             La hamburguesa es un tipo de sándwich que consiste en un filete de carne picada, generalmente de ternera, que se cocina a la parrilla o a la plancha.
           </p>
-          <br />
           <h6>Ingredientes</h6>
           <p>
             Pan de hamburguesa, carne picada, lechuga, tomate, cebolla, queso, bacon, pepinillos, ketchup, mostaza, mayonesa.
@@ -480,11 +486,10 @@
         </li>
         <li class="recipe-item">
           <img src="https://www.foodandwine.com/thmb/_GuYt-td3s1L_Q6JjLLyn7xC1Vc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/California-Sushi-Rolls-FT-RECIPE0123-efc7744ed3e642c7864788a7c227facb.jpg" alt="Sushi" />
-          <h5>Sushi</h3>
+          <h5>Sushi</h5>
           <p>
             El sushi es un plato de origen japonés que se prepara con arroz cocido y vinagre, combinado con otros ingredientes como pescado, mariscos, verduras, huevo o frutas.
           </p>
-          <br />
           <h6>Ingredientes</h6>
           <p>
             Arroz, alga nori, pescado, verduras, vinagre de arroz, azúcar, sal, salsa de soja, wasabi, jengibre encurtido.
@@ -492,11 +497,10 @@
         </li>
         <li class="recipe-item">
           <img src="https://www.foodandwine.com/thmb/4qg95tjf0mgdHqez5OLLYc0PNT4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg" alt="Pizza margarita" />
-          <h5>Pizza margarita</h3>
+          <h5>Pizza margarita</h5>
           <p>
             La pizza margarita es una de las recetas más populares de la cocina italiana. Se caracteriza por su sencillez y su sabor inconfundible.
           </p>
-          <br />
           <h6>Ingredientes</h6>
           <p>
             Masa de pizza, tomate, mozzarella, albahaca, aceite de oliva, sal.
@@ -504,11 +508,43 @@
         </li>
         <li class="recipe-item">
           <img src="https://www.foodandwine.com/thmb/jldKZBYIoXJWXodRE9ut87K8Mag=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg" alt="Hamburguesa" />
-          <h5>Hamburguesa</h3>
+          <h5>Hamburguesa</h5>
           <p>
             La hamburguesa es un tipo de sándwich que consiste en un filete de carne picada, generalmente de ternera, que se cocina a la parrilla o a la plancha.
           </p>
-          <br />
+          <h6>Ingredientes</h6>
+          <p>
+            Pan de hamburguesa, carne picada, lechuga, tomate, cebolla, queso, bacon, pepinillos, ketchup, mostaza, mayonesa.
+          </p>
+        </li>
+        <li class="recipe-item">
+          <img src="https://www.foodandwine.com/thmb/_GuYt-td3s1L_Q6JjLLyn7xC1Vc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/California-Sushi-Rolls-FT-RECIPE0123-efc7744ed3e642c7864788a7c227facb.jpg" alt="Sushi" />
+          <h5>Sushi</h5>
+          <p>
+            El sushi es un plato de origen japonés que se prepara con arroz cocido y vinagre, combinado con otros ingredientes como pescado, mariscos, verduras, huevo o frutas.
+          </p>
+          <h6>Ingredientes</h6>
+          <p>
+            Arroz, alga nori, pescado, verduras, vinagre de arroz, azúcar, sal, salsa de soja, wasabi, jengibre encurtido.
+          </p>
+        </li>
+        <li class="recipe-item">
+          <img src="https://www.foodandwine.com/thmb/4qg95tjf0mgdHqez5OLLYc0PNT4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg" alt="Pizza margarita" />
+          <h5>Pizza margarita</h5>
+          <p>
+            La pizza margarita es una de las recetas más populares de la cocina italiana. Se caracteriza por su sencillez y su sabor inconfundible.
+          </p>
+          <h6>Ingredientes</h6>
+          <p>
+            Masa de pizza, tomate, mozzarella, albahaca, aceite de oliva, sal.
+          </p>
+        </li>
+        <li class="recipe-item">
+          <img src="https://www.foodandwine.com/thmb/jldKZBYIoXJWXodRE9ut87K8Mag=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg" alt="Hamburguesa" />
+          <h5>Hamburguesa</h5>
+          <p>
+            La hamburguesa es un tipo de sándwich que consiste en un filete de carne picada, generalmente de ternera, que se cocina a la parrilla o a la plancha.
+          </p>
           <h6>Ingredientes</h6>
           <p>
             Pan de hamburguesa, carne picada, lechuga, tomate, cebolla, queso, bacon, pepinillos, ketchup, mostaza, mayonesa.
@@ -516,18 +552,17 @@
         </li>
       </ul>
     </section>
-    </main>
-    <footer class="card">
-      <!-- I dinamically add the year with JavaScript -->
-      <p>
-        <span class="font-semibold">
-            © 
-            <span id="footerCurrentYear"></span>
-            Saborly
-        </span> 
-        | Made with ❤️ for food | Gabriel De Lellis.</p>
-    </footer>
-  </body>
+  </main>
+  <footer class="card" role="contentinfo">
+    <p>
+      <span class="font-semibold">
+          © 
+          <span id="footerCurrentYear"></span>
+          Saborly
+      </span> 
+      | Made with ❤️ for food | Gabriel De Lellis.</p>
+  </footer>
+</body>
   <script>
     // Dinamically set the current year in the footer
     const setFullYearInFooter = () => document.getElementById('footerCurrentYear').textContent = new Date().getFullYear();
@@ -545,6 +580,7 @@
         toggleCssBtn.addEventListener('click', toggleCss);
     };
 
+    // Run the functions after the DOM is fully loaded
     document.addEventListener('DOMContentLoaded', () => {
       setFullYearInFooter();
       toggleCssOnClick();
